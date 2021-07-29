@@ -1,7 +1,7 @@
 import IRoute from "../interfaces/route";
-import AboutPage from "../pages/about";
-import HomePage from "../pages/home";
-import ParamsTesting from "../pages/paramsTesting";
+import AboutPage from "../pages/about/about";
+import HomePage from "../pages/home/home";
+import ParamsTesting from "../pages/paramsTesting/paramsTesting";
 
 
 
