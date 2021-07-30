@@ -21,6 +21,10 @@ const DisplayData: React.FunctionComponent<IPage & RouteComponentProps<any>> = p
                     <label>
                         search: <input type='text' />
                     </label>
+                    <input type = 'submit' name ='people' value ='people'/>
+                    <input type = 'submit' name ='ships' value ='ships'/>
+                    <input type = 'submit' name ='Planets' value ='Planets'/>
+                    <input type = 'submit' name ='Species' value ='Species'/>
                 </form>
 
                 <div>
