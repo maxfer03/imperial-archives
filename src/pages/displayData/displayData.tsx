@@ -2,7 +2,10 @@ import React, { useEffect, useState } from 'react'
 import { Link, RouteComponentProps, withRouter } from 'react-router-dom'
 import IPage from '../../interfaces/page'
 import logging from '../../config/logging'
+import CharacterList from '../../containers/characterList'
 import { homePath } from '../../interfaces/pagePaths'
+import style from './displayData.module.css'
+
 
 //                                               ↓to access the match.params and the withRouter()
 const DisplayData: React.FunctionComponent<IPage & RouteComponentProps<any>> = props => {
@@ -27,8 +30,8 @@ const DisplayData: React.FunctionComponent<IPage & RouteComponentProps<any>> = p
                     <input type = 'submit' name ='Species' value ='Species'/>
                 </form>
 
-                <div>
-                    info displayed here
+                <div className={style.data}>
+                    <CharacterList />
                 </div>
                 
             </div>

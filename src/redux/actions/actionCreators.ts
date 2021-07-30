@@ -13,7 +13,7 @@ export const getAllCharacters: ActionCreator<
 > = () => {
   return async (dispatch: Dispatch) => {
     try {
-      const response = await axios.get("https://swapi.co/api/people/");
+      const response = await axios.get("https://swapi.dev/api/people/");
       dispatch({
         characters: response.data.results,
         type: CharacterActionTypes.GET_ALL,

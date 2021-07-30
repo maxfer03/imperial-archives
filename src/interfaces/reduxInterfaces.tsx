@@ -1,4 +1,5 @@
 import { CharacterActionTypes } from "../redux/actions/actionTypes";
+import { Store } from "redux";
 
 // Define the Character type
 export interface ICharacter {
@@ -19,8 +20,8 @@ export interface ICharacter {
     edited: string;
     url: string;
 }
-  
-   // Define the Character State
+
+// Define the Character State
 export interface ICharacterState {
     readonly characters: ICharacter[];
 }
@@ -33,4 +34,8 @@ export interface ICharacterGetAllAction {
 
 export interface IAppState {
     characterState: ICharacterState;
+}
+
+export interface IProps {
+    store: Store<IAppState>;
 }

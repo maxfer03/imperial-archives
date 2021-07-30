@@ -2,13 +2,37 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import reportWebVitals from './reportWebVitals';
 import Application from './application'
+import { Provider } from 'react-redux';
+import { Store } from 'redux';
+import configureStore from './redux/store/store'
+import { IAppState } from './interfaces/reduxInterfaces'
+import { IProps } from './interfaces/reduxInterfaces';
+import { getAllCharacters } from './redux/actions/actionCreators'
 
-ReactDOM.render(
+//       or React.SFC
+const Root: React.FunctionComponent <IProps> = props => {
+  return (
+    <Provider store={props.store}>
+      <Application />
+    </Provider>
+  );
+};
+
+
+
+const store = configureStore();
+store.dispatch(getAllCharacters());
+
+ReactDOM.render(<Root store={store} />, document.getElementById(
+  'root'
+) as HTMLElement);
+
+/* ReactDOM.render(
   <React.StrictMode>
-    <Application/>
+    <Application />
   </React.StrictMode>,
   document.getElementById('root')
-);
+); */
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
