@@ -17,7 +17,7 @@ const Application: React.FunctionComponent<{}> = props => {
     return (
     <div>
         <BrowserRouter>
-            <Switch>
+            
                 {routes.map((route, index) => {
                     return (
                         <Route
@@ -34,7 +34,7 @@ const Application: React.FunctionComponent<{}> = props => {
                         />
                     )
                 })}
-            </Switch>
+            
         </BrowserRouter>
     </div>
     )

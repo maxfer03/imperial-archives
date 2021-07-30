@@ -2,9 +2,9 @@ import React, {useEffect} from 'react'
 import { Link } from 'react-router-dom'
 import IPage from '../../interfaces/page'
 import logging from '../../config/logging' 
-import { mainPath } from '../../interfaces/pagePaths'
+import { aboutPath, homePath, mainPath } from '../../interfaces/pagePaths'
 
-const HomePage: React.FunctionComponent<IPage> = props => {
+const NavBar: React.FunctionComponent<IPage> = props => {
 
     
     useEffect(() => {
@@ -13,10 +13,12 @@ const HomePage: React.FunctionComponent<IPage> = props => {
     
     return (
         <div>
-            <div>homepage</div>
+            <div>this is the nav bar</div>
+            <Link to ={aboutPath}>About</Link>
             <Link to ={mainPath}>Main</Link>
+            <Link to ={homePath}>Home</Link>
         </div>
     )
 }
 
-export default HomePage
+export default NavBar

@@ -4,7 +4,7 @@ import routes from "../config/routes"
 // calling this variables in the components, it wont matter if the path is changed.
 //wip
 
-const homePath: string = '/'//routes[0].path esto no funciona y no capto por que
-const aboutPath: string = '/about'//routes[1].path
-console.log(routes)
-export {homePath, aboutPath}
+const homePath: string = '/'//routes[x].path esto no funciona y no capto por que
+const aboutPath: string = '/main/about'//routes[x].path
+const mainPath: string = "/main"
+export {homePath, aboutPath, mainPath}
