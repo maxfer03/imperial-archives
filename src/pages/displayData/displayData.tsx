@@ -11,7 +11,7 @@ import style from './displayData.module.css'
 
 //                                               ↓to access the match.params and the withRouter()
 const DisplayData: React.FunctionComponent<IPage & RouteComponentProps<any>> = props => {
-
+    const [loading, setLoading] = useState<boolean>(false);
 
     useEffect(() => {
         logging.info(`loading ${props.name}`)
@@ -21,7 +21,13 @@ const DisplayData: React.FunctionComponent<IPage & RouteComponentProps<any>> = p
         const endpoint: string = e.target.innerText
         e.preventDefault()
         //console.log(e.target.innerText)
+        setLoading(true)
         indexStore.dispatch(getAllCategory(endpoint.toLowerCase()))
+        setLoading(false)
+    }
+
+    if(loading){
+        return <h2>Loading....</h2>
     }
 
     return (
@@ -36,7 +42,7 @@ const DisplayData: React.FunctionComponent<IPage & RouteComponentProps<any>> = p
 
 
                 <div className={style.data}>
-                    <CategoryList />
+                    <CategoryList/>
                 </div>
 
             </div>
