@@ -32,21 +32,26 @@ const DisplayData: React.FunctionComponent<IPage & RouteComponentProps<any>> = p
     }
 
     return (
-        <div className={style.main}>
-            
-            <div>
-                <div className={style.filters}>
-                <button className={style.EachFilter} onClick={(e: any) => handleClick(e)}>People</button>
-                <button className={style.EachFilter} onClick={(e: any) => handleClick(e)}>Starships</button>
-                <button className={style.EachFilter} onClick={(e: any) => handleClick(e)}>Species</button>
-                <button className={style.EachFilter} onClick={(e: any) => handleClick(e)}>Planets</button>
-                <button className={style.EachFilter} onClick={(e: any) => handleClick(e)}>Vehicles</button>
-                </div>
+        <div className={style.mainContainer}>
+            <div className = {style.crt}>
+                
+                <div className={style.main}>
 
-                <div className={style.data}>
-                    <CategoryList />
-                </div>
+                    <div>
+                        <div className={style.filters}>
+                            <button className={style.eachFilter} onClick={(e: any) => handleClick(e)}>People</button>
+                            <button className={style.eachFilter} onClick={(e: any) => handleClick(e)}>Starships</button>
+                            <button className={style.eachFilter} onClick={(e: any) => handleClick(e)}>Species</button>
+                            <button className={style.eachFilter} onClick={(e: any) => handleClick(e)}>Planets</button>
+                            <button className={style.eachFilter} onClick={(e: any) => handleClick(e)}>Vehicles</button>
+                        </div>
 
+                        <div className={style.data}>
+                            <CategoryList />
+                        </div>
+
+                    </div>
+                </div>
             </div>
         </div>
     )
