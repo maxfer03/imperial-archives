@@ -1,6 +1,6 @@
-import { ICharacterGetAllAction } from "../../interfaces/reduxInterfaces";
+import { IDataGetAllAction } from "../../interfaces/reduxInterfaces";
 
-export enum CharacterActionTypes {
+export enum DataActionTypes {
     GET_ALL = 'GET_ALL',
 }
 
@@ -8,4 +8,4 @@ export enum CharacterActionTypes {
 Combine the action types with a union (we assume there are more)
 example: export type CharacterActions = IGetAllAction | IGetOneAction ... 
 */
-export type CharacterActions = ICharacterGetAllAction;
+export type DataActions = IDataGetAllAction;

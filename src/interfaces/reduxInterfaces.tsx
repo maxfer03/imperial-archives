@@ -1,10 +1,10 @@
-import { CharacterActionTypes } from "../redux/actions/actionTypes";
+import { DataActionTypes } from "../redux/actions/actionTypes";
 import { Store } from "redux";
 
 // Define the Character type
-export interface ICharacter {
+export interface IData {
     name: string;
-    height: string;
+    /* height: string;
     mass: string;
     hair_color: string;
     skin_color: string;
@@ -18,22 +18,22 @@ export interface ICharacter {
     starships: string[];
     created: string;
     edited: string;
-    url: string;
+    url: string; */
 }
 
 // Define the Character State
-export interface ICharacterState {
-    readonly characters: ICharacter[];
+export interface IDataState {
+    readonly data: IData[];
 }
 
 // Interface for Get All Action Type
-export interface ICharacterGetAllAction {
-    type: CharacterActionTypes.GET_ALL;
-    characters: ICharacter[];
+export interface IDataGetAllAction {
+    type: DataActionTypes.GET_ALL;
+    data: IData[];
 }
 
 export interface IAppState {
-    characterState: ICharacterState;
+    dataState: IDataState;
 }
 
 export interface IProps {

@@ -1,20 +1,20 @@
 import { Reducer } from "redux";
-import { CharacterActions, CharacterActionTypes } from "../actions/actionTypes";
-import { ICharacterState } from "../../interfaces/reduxInterfaces";
+import { DataActions, DataActionTypes } from "../actions/actionTypes";
+import { IDataState } from "../../interfaces/reduxInterfaces";
 
-const initialCharacterState: ICharacterState = {
-  characters: [],
+const initialCharacterState: IDataState = {
+  data: [],
 };
 
-export const characterReducer: Reducer<ICharacterState, CharacterActions> = (
+export const dataReducer: Reducer<IDataState, DataActions> = (
   state = initialCharacterState,
   action
 ) => {
   switch (action.type) {
-    case CharacterActionTypes.GET_ALL: {
+    case DataActionTypes.GET_ALL: {
       return {
         ...state,
-        characters: action.characters,
+        data: action.data,
       };
     }
     default:
