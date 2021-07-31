@@ -1,12 +1,12 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { IAppState, ICharacter } from '../interfaces/reduxInterfaces';
-import style from './characterList.module.css'
+import style from './categoryList.module.css'
 interface IProps {
     characters: ICharacter[];
 }
 
-class CharacterList extends React.Component<IProps> {
+class CategoryList extends React.Component<IProps> {
     public render() {
       const { characters } = this.props;
       return (
@@ -31,4 +31,4 @@ class CharacterList extends React.Component<IProps> {
     };
   };
   
-  export default connect(mapStateToProps)(CharacterList);
+  export default connect(mapStateToProps)(CategoryList);

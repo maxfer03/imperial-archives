@@ -2,9 +2,9 @@ import React, { useEffect, useState } from 'react'
 import { Link, RouteComponentProps, withRouter } from 'react-router-dom'
 import IPage from '../../interfaces/page'
 import logging from '../../config/logging'
-import CharacterList from '../../containers/characterList'
+import CategoryList from '../../containers/categoryList'
 import { indexStore } from '../../index'
-import { getAllCharacters } from '../../redux/actions/actionCreators'
+import { getAllCategory } from '../../redux/actions/actionCreators'
 import { homePath } from '../../interfaces/pagePaths'
 import style from './displayData.module.css'
 
@@ -18,9 +18,10 @@ const DisplayData: React.FunctionComponent<IPage & RouteComponentProps<any>> = p
     }, [props.name])
 
     function handleClick(e: any) {
+        const endpoint: string = e.target.innerText
         e.preventDefault()
-        console.log(e.target.innerText)
-        indexStore.dispatch(getAllCharacters())
+        //console.log(e.target.innerText)
+        indexStore.dispatch(getAllCategory(endpoint.toLowerCase()))
     }
 
     return (
@@ -28,12 +29,12 @@ const DisplayData: React.FunctionComponent<IPage & RouteComponentProps<any>> = p
             <div>
 
                 <button onClick={(e: any) => handleClick(e)}>People</button>
-                <button onClick={(e: any) => handleClick(e)}>Ships</button>
+                <button onClick={(e: any) => handleClick(e)}>Starships</button>
                 <button onClick={(e: any) => handleClick(e)}>Planets</button>
                 <button onClick={(e: any) => handleClick(e)}>Species</button>
 
                 <div className={style.data}>
-                    <CharacterList />
+                    <CategoryList />
                 </div>
 
             </div>

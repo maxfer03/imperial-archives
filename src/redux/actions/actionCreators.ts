@@ -8,12 +8,13 @@ import {
 } from "../../interfaces/reduxInterfaces";
 import { CharacterActionTypes } from "./actionTypes";
 
-export const getAllCharacters: ActionCreator<
+export const getAllCategory: ActionCreator<
   ThunkAction<Promise<any>, ICharacterState, null, ICharacterGetAllAction>
-> = () => {
+> = (endpoint?: string) => {
+  console.log(endpoint)
   return async (dispatch: Dispatch) => {
     try {
-      const response = await axios.get("https://swapi.dev/api/people/");
+      const response = await axios.get(`https://swapi.dev/api/${endpoint}/`);
       dispatch({
         characters: response.data.results,
         type: CharacterActionTypes.GET_ALL,

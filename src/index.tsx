@@ -7,7 +7,7 @@ import { Store } from 'redux';
 import configureStore from './redux/store/store'
 import { IAppState } from './interfaces/reduxInterfaces'
 import { IProps } from './interfaces/reduxInterfaces';
-import { getAllCharacters } from './redux/actions/actionCreators'
+import { getAllCategory } from './redux/actions/actionCreators'
 
 //       or React.SFC
 const Root: React.FunctionComponent <IProps> = props => {
@@ -21,7 +21,7 @@ const Root: React.FunctionComponent <IProps> = props => {
 
 
 export const indexStore = configureStore();
-//store.dispatch(getAllCharacters());
+//store.dispatch(getAllCategory());
 
 ReactDOM.render(<Root store={indexStore} />, document.getElementById(
   'root'
