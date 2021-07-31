@@ -5,13 +5,22 @@ import { IAppState, IData } from '../interfaces/reduxInterfaces';
 import style from './categoryList.module.css'
 interface IProps {
   data: IData[];
+  loading: boolean
 }
 
-const CategoryList: React.FunctionComponent<IProps> = ({data}) => {
-  const [loading, setloading] = useState<boolean>(false);
+const CategoryList: React.FunctionComponent<IProps> = ({data, loading}) => {
+  const loadingDiv = document.querySelector(".loading")
 
-  console.log(data)
-  return (
+  
+  
+  
+  if (loading){
+    return(
+      <div className ="loading">Loading...</div>
+    )
+  }
+
+else return (
     <div>
       {data.map( e => 
         {return (

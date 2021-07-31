@@ -20,16 +20,16 @@ const DisplayData: React.FunctionComponent<IPage & RouteComponentProps<any>> = p
 
     function handleClick(e: any) {
         const endpoint: string = e.target.innerText
-        e.preventDefault()
-        //console.log(e.target.innerText)
-        setLoading(true)
-        indexStore.dispatch(getAllCategory(endpoint.toLowerCase()))
-        setLoading(false)
+
+        const fetchData = async () => {
+            setLoading(true)
+            await indexStore.dispatch(getAllCategory(endpoint.toLowerCase()))
+            setLoading(false)
+        }
+        fetchData()
     }
 
-    if (loading) {
-        return <h2>Loading....</h2>
-    }
+
 
     return (
         <div className={style.mainContainer}>
@@ -47,7 +47,7 @@ const DisplayData: React.FunctionComponent<IPage & RouteComponentProps<any>> = p
                         </div>
 
                         <div className={style.data}>
-                            <CategoryList />
+                            <CategoryList loading = {loading} />
                         </div>
 
                     </div>
