@@ -34,6 +34,7 @@ const DisplayData: React.FunctionComponent<IPage & RouteComponentProps<any>> = p
                 <button onClick={(e: any) => handleClick(e)}>Species</button>
                 <button onClick={(e: any) => handleClick(e)}>Vehicles</button>
 
+
                 <div className={style.data}>
                     <CategoryList />
                 </div>
