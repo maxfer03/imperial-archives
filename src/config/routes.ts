@@ -4,6 +4,7 @@ import Landing from "../pages/home/landing";
 import paramsTesting from "../pages/paramsTesting/paramsTesting";
 import displayData from "../pages/displayData/displayData";
 import navBar from "../pages/navBar/navBar";
+import navbarSpacing from "../otherComponents/navbarSpacing";
 
 
 
@@ -19,6 +20,12 @@ const routes: IRoute[] = [
         name: 'NavBar',
         exact: false ,
         component: navBar,
+    },
+    {
+        path: '/main',
+        name: 'NavBarSpacing',
+        exact: false ,
+        component: navbarSpacing,
     },
     {
         path: '/main',
