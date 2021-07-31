@@ -1,0 +1,104 @@
+:root{
+   --triangles-color: hsl(0, 0%, 15%);
+   --base-neon: 0px 0px 6px 1px hsl(0, 0%, 100%);
+
+}
+
+.colors{
+    color: hsl(0, 0%, 50%)
+}
+
+.leftTriangle {
+  top: 0%;
+  left: 0%;
+  position: fixed;
+  z-index: -100;
+
+  width: 0;
+  height: 0;
+  border-left: 50vh solid var(--triangles-color);
+  border-right: 0px solid transparent;
+  border-bottom: 100vh solid transparent;
+}
+
+.leftLine {
+  top: 0%;
+  left: 0%;
+  position: fixed;
+  z-index: -99;
+
+  height: 200vh;
+  width: 0.5vh;
+  background: white;
+  /* box-shadow: 3px -1px 31px 10px rgba(255,255,255,0.75); */
+ 
+  animation: glow 7s ease-in-out both infinite;
+
+  transform: rotate(26.3deg) scale(2)
+}
+
+.rightTriangle {
+  top: 0%;
+  right: 0%;
+  position: fixed;
+  z-index: -100;
+
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 50vh solid var(--triangles-color);
+
+  border-bottom: 100vh solid transparent;
+}
+
+.rightLine {
+    top: 0%;
+    right: 0%;
+    position: fixed;
+    z-index: -99;
+  
+    height: 200vh;
+    width: 0.5vh;
+    background: white;
+    animation: glow 7s ease-in-out both infinite;
+    transform: rotate(-26.3deg) scale(2)
+}
+
+@keyframes glow {
+	 0%, 100% {
+		 box-shadow: 0 0 50px 1px hsl(0, 0%, 85%), 
+         0 -10px 50px white, -10px 10px 50px rgb(161, 161, 161), 
+         10px 10px 50px white,
+         var(--base-neon)
+         
+	}
+	 33% {
+        box-shadow: 0 0 40px 1px hsl(0, 0%, 72%), 
+        0 -10px 43px hsl(0, 0%, 61%), -10px 10px 50px hsl(0, 0%, 63%), 
+        10px 10px 50px hsl(0, 0%, 50%),
+        var(--base-neon)
+	}
+    55% {
+        box-shadow: 0 0 35px 1px hsl(0, 0%, 83%), 
+        0 -10px 43px hsl(0, 0%, 48%), -10px 10px 50px hsl(0, 0%, 60%), 
+        10px 10px 50px hsl(0, 0%, 55%),
+        var(--base-neon)
+	}
+	 66% {
+        box-shadow: 0 0 45px 1px hsl(0, 0%, 69%), 
+        0 -10px 50px rgb(197, 197, 197), -10px 10px 50px rgb(170, 170, 170), 
+        10px 10px 50px rgb(136, 136, 136),
+        var(--base-neon)
+	}
+    88% {
+        box-shadow: 0 0 35px 1px hsl(0, 0%, 82%), 
+        0 -10px 50px rgb(224, 224, 224), -10px 10px 50px rgb(209, 209, 209), 
+        10px 10px 50px rgb(199, 199, 199),
+        var(--base-neon)
+	}
+}
+
+
+
+
+

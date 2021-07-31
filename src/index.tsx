@@ -9,15 +9,24 @@ import { IAppState } from './interfaces/reduxInterfaces'
 import { IProps } from './interfaces/reduxInterfaces';
 import { getAllCategory } from './redux/actions/actionCreators'
 
+import './index.css'
+
 //       or React.SFC
 const Root: React.FunctionComponent <IProps> = props => {
   return (
     <Provider store={props.store}>
-      <Application />
+      <div className = 'webpage'>
+        <div className = 'leftTriangle'/>
+        <div className = 'leftLine'/>
+        <div className = 'rightTriangle'/> 
+        <div className = 'rightLine'/>     
+        
+      </div>
     </Provider>
   );
 };
 
+// <Application />
 
 
 export const indexStore = configureStore();
