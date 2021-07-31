@@ -7,6 +7,7 @@ import {
 import logging from './config/logging'
 import routes from './config/routes'
 
+import style from "./application.module.css"
 
 const Application: React.FunctionComponent<{}> = props => {
 
@@ -15,7 +16,8 @@ const Application: React.FunctionComponent<{}> = props => {
     }, [])
 
     return (
-        <div>
+        <div className ={style.application}>
+            
             <BrowserRouter>
 
                 {routes.map((route, index) => {

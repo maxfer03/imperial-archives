@@ -1,10 +1,32 @@
-.main{
-    background: white;
-    border: 1px solid black;
-    padding: 5px;
+@font-face {
+    font-family: 'pixelFont'; /*a name to be used later*/
+    src: url("../../Perfect DOS VGA 437 Win.ttf"); /*URL to font*/
 }
 
-.data{
-    background: white;
-    border: 1px solid black;
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: hsl(0, 0%, 15%);
+  border: 2px solid rgb(255, 255, 255);
+  padding: 10px;
+  
+}
+
+
+.filters{
+}
+
+.EachFilter:focus-within{
+    padding-top: 5px;
+}
+
+.data {
+  background: rgb(0, 0, 0);
+  border: 1px solid rgb(255, 255, 255);
+  height: 40vh;
+  color: white;
+  font-family: 'pixelFont';
+  padding: 10px;
 }

@@ -19,6 +19,7 @@ const Root: React.FunctionComponent <IProps> = props => {
   return (
     <Provider store={props.store}>
       <div className = 'webpage'>
+        <div className= 'centralBeam'/>
         <div className = 'leftTriangle'/>
         <div className = 'leftLine'/>
         <div className = 'rightTriangle'/> 

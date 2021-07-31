@@ -7,6 +7,7 @@ import { indexStore } from '../../index'
 import { getAllCategory } from '../../redux/actions/actionCreators'
 import { landingPath } from '../../interfaces/pagePaths'
 import style from './displayData.module.css'
+import imperial_logo from '../../imgs/empire-symbol.png'
 
 
 //                                               ↓to access the match.params and the withRouter()
@@ -26,28 +27,26 @@ const DisplayData: React.FunctionComponent<IPage & RouteComponentProps<any>> = p
         setLoading(false)
     }
 
-    if(loading){
+    if (loading) {
         return <h2>Loading....</h2>
     }
 
     return (
         <div className={style.main}>
+            
             <div>
-
-                <button onClick={(e: any) => handleClick(e)}>People</button>
-                <button onClick={(e: any) => handleClick(e)}>Starships</button>
-                <button onClick={(e: any) => handleClick(e)}>Planets</button>
-                <button onClick={(e: any) => handleClick(e)}>Species</button>
-                <button onClick={(e: any) => handleClick(e)}>Vehicles</button>
-
-
-                <div className={style.data}>
-                    <CategoryList/>
+                <div className={style.filters}>
+                <button className={style.EachFilter} onClick={(e: any) => handleClick(e)}>People</button>
+                <button className={style.EachFilter} onClick={(e: any) => handleClick(e)}>Starships</button>
+                <button className={style.EachFilter} onClick={(e: any) => handleClick(e)}>Species</button>
+                <button className={style.EachFilter} onClick={(e: any) => handleClick(e)}>Planets</button>
+                <button className={style.EachFilter} onClick={(e: any) => handleClick(e)}>Vehicles</button>
                 </div>
 
-            </div>
-            <div>
-                <Link to={landingPath}>Go to HomePage</Link>
+                <div className={style.data}>
+                    <CategoryList />
+                </div>
+
             </div>
         </div>
     )
