@@ -25,7 +25,7 @@ const DisplayData: React.FunctionComponent<IPage & RouteComponentProps<any>> = p
     }
 
     return (
-        <div>
+        <div className={style.main}>
             <div>
 
                 <button onClick={(e: any) => handleClick(e)}>People</button>
