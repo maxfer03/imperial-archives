@@ -33,8 +33,8 @@ const DisplayData: React.FunctionComponent<IPage & RouteComponentProps<any>> = p
 
     return (
         <div className={style.mainContainer}>
-            <div className = {style.crt}>
-                
+            <div className={style.crt}>
+
                 <div className={style.main}>
 
                     <div>
@@ -47,10 +47,19 @@ const DisplayData: React.FunctionComponent<IPage & RouteComponentProps<any>> = p
                         </div>
 
                         <div className={style.data}>
-                            <CategoryList loading = {loading} />
+                            <CategoryList loading={loading} />
                         </div>
 
                     </div>
+                </div>
+            </div>
+            <div className={style.buttons}>
+                <div className={style.buttonContainer}>
+                    <button className={style.eachButton} />
+                    <button className={style.eachButton} />
+                    <button className={style.eachButton} />
+                    <button className={style.eachButton} />
+                    
                 </div>
             </div>
         </div>
