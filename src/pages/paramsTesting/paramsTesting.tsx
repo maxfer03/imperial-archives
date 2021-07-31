@@ -1,8 +1,7 @@
 import React, {useEffect, useState} from 'react'
 import { Link, RouteComponentProps, withRouter } from 'react-router-dom'
 import IPage from '../../interfaces/page'
-import logging from '../../config/logging' 
-import { homePath } from '../../interfaces/pagePaths'
+import logging from '../../config/logging'
 
 //                                               ↓to access the match.params and withRouter()
 const ParamsTesting: React.FunctionComponent<IPage & RouteComponentProps<any>> = props => {
@@ -26,9 +25,6 @@ const ParamsTesting: React.FunctionComponent<IPage & RouteComponentProps<any>> =
         <div>
             <div>
                 {message}
-            </div>
-            <div>
-                <Link to = {homePath}>Go to HomePage</Link>
             </div>
         </div>
     )

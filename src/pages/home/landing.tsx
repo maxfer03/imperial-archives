@@ -4,7 +4,7 @@ import IPage from '../../interfaces/page'
 import logging from '../../config/logging' 
 import { mainPath } from '../../interfaces/pagePaths'
 
-const HomePage: React.FunctionComponent<IPage> = props => {
+const Landing: React.FunctionComponent<IPage> = props => {
 
     
     useEffect(() => {
@@ -13,10 +13,10 @@ const HomePage: React.FunctionComponent<IPage> = props => {
     
     return (
         <div>
-            <div>homepage</div>
+            <div>Landing</div>
             <Link to ={mainPath}>Main</Link>
         </div>
     )
 }
 
-export default HomePage
+export default Landing

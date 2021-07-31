@@ -5,7 +5,7 @@ import logging from '../../config/logging'
 import CategoryList from '../../containers/categoryList'
 import { indexStore } from '../../index'
 import { getAllCategory } from '../../redux/actions/actionCreators'
-import { homePath } from '../../interfaces/pagePaths'
+import { landingPath } from '../../interfaces/pagePaths'
 import style from './displayData.module.css'
 
 
@@ -41,7 +41,7 @@ const DisplayData: React.FunctionComponent<IPage & RouteComponentProps<any>> = p
 
             </div>
             <div>
-                <Link to={homePath}>Go to HomePage</Link>
+                <Link to={landingPath}>Go to HomePage</Link>
             </div>
         </div>
     )

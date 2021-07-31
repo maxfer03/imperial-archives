@@ -1,6 +1,6 @@
 import IRoute from "../interfaces/route";
 import aboutPage from "../pages/about/about";
-import homePage from "../pages/home/home";
+import Landing from "../pages/home/landing";
 import paramsTesting from "../pages/paramsTesting/paramsTesting";
 import displayData from "../pages/displayData/displayData";
 import navBar from "../pages/navBar/navBar";
@@ -9,10 +9,10 @@ import navBar from "../pages/navBar/navBar";
 
 const routes: IRoute[] = [
     {
-        path: '/',
-        name: 'Home',
+        path: '/start',
+        name: 'Landing',
         exact: true ,
-        component: homePage,
+        component: Landing,
     },
     {
         path: '/main',
