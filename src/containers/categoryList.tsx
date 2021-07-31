@@ -14,7 +14,6 @@ const CategoryList: React.FunctionComponent<IProps> = ({data}) => {
       {data.map( e => 
         {return (
           <div>{e.name}</div>
-
         )}
       )}
     </div>

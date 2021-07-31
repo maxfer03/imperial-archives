@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import ReactDOM from 'react-dom';
 import reportWebVitals from './reportWebVitals';
 import Application from './application'
@@ -11,8 +11,11 @@ import { getAllCategory } from './redux/actions/actionCreators'
 
 import './index.css'
 
+
+
 //       or React.SFC
 const Root: React.FunctionComponent <IProps> = props => {
+
   return (
     <Provider store={props.store}>
       <div className = 'webpage'>
@@ -20,7 +23,7 @@ const Root: React.FunctionComponent <IProps> = props => {
         <div className = 'leftLine'/>
         <div className = 'rightTriangle'/> 
         <div className = 'rightLine'/>     
-        
+        <Application />
       </div>
     </Provider>
   );
