@@ -20,10 +20,10 @@ const Root: React.FunctionComponent <IProps> = props => {
 
 
 
-const store = configureStore();
-store.dispatch(getAllCharacters());
+export const indexStore = configureStore();
+//store.dispatch(getAllCharacters());
 
-ReactDOM.render(<Root store={store} />, document.getElementById(
+ReactDOM.render(<Root store={indexStore} />, document.getElementById(
   'root'
 ) as HTMLElement);
 

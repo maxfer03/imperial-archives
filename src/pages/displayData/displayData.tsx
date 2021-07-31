@@ -3,6 +3,8 @@ import { Link, RouteComponentProps, withRouter } from 'react-router-dom'
 import IPage from '../../interfaces/page'
 import logging from '../../config/logging'
 import CharacterList from '../../containers/characterList'
+import { indexStore } from '../../index'
+import { getAllCharacters } from '../../redux/actions/actionCreators'
 import { homePath } from '../../interfaces/pagePaths'
 import style from './displayData.module.css'
 
@@ -15,25 +17,25 @@ const DisplayData: React.FunctionComponent<IPage & RouteComponentProps<any>> = p
         logging.info(`loading ${props.name}`)
     }, [props.name])
 
-
+    function handleClick(e: any) {
+        e.preventDefault()
+        console.log(e.target.innerText)
+        indexStore.dispatch(getAllCharacters())
+    }
 
     return (
         <div>
             <div>
-                <form>
-                    <label>
-                        search: <input type='text' />
-                    </label>
-                    <input type = 'submit' name ='people' value ='people'/>
-                    <input type = 'submit' name ='ships' value ='ships'/>
-                    <input type = 'submit' name ='Planets' value ='Planets'/>
-                    <input type = 'submit' name ='Species' value ='Species'/>
-                </form>
+
+                <button onClick={(e: any) => handleClick(e)}>People</button>
+                <button onClick={(e: any) => handleClick(e)}>Ships</button>
+                <button onClick={(e: any) => handleClick(e)}>Planets</button>
+                <button onClick={(e: any) => handleClick(e)}>Species</button>
 
                 <div className={style.data}>
                     <CharacterList />
                 </div>
-                
+
             </div>
             <div>
                 <Link to={homePath}>Go to HomePage</Link>
