@@ -8,6 +8,7 @@ Small Star Wars themed app connected to swAPI I developed to practice TypeScript
 [Background Glowing Effect](https://codepen.io/bennettfeely/pen/BzGVkA?editors=1100)
 [Distortion on Text](https://codepen.io/cvan/pen/Zarmry)
 [Create a CRT terminal with css and JS](https://dev.to/ekeijl/retro-crt-terminal-screen-in-css-js-4afh)
+[Some css ui effects](ui-snippets.dev)
 
 ## How to run it
 
