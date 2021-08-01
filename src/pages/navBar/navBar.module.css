@@ -1,24 +1,60 @@
-.navbar{
-    position: fixed;
-    top: 0%;
-    left: 0%;
-    left: 50%;
-    transform: translate(-50%, 0);
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
+.navbar {
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 
-    background: white;
-    border: 1px solid black;
-    width: 70%;
-    height: 30px;
-    margin-bottom: 20px;
+  background: hsl(0, 0%, 15%);
+  border: 2px solid hsl(0, 0%, 15%);
+  border-top: 0px;
+  border-radius: 100%;
+  border-radius: 0px 0px 10px 10px;
+  box-shadow: inset 0px 0px 7px hsla(0, 0%, 0%, 0.452),
+    0px 0px 20px hsla(0, 0%, 0%, 0.452);
+
+  width: 70%;
+  height: 30px;
+  margin-bottom: 20px;
 }
 
-.links{
-    display: flex;
-    justify-content: space-around;
+.links {
+  display: flex;
+  justify-content: space-around;
 
-    width: 400px;
+  width: 400px;
+}
+
+
+
+.eachLink {
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+  color: white;
+  text-decoration: none;
+}
+
+.eachLink::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: -5%;
+  left: 0;
+  background-color: #EB212E;
+  border-radius: 10vh;
+  box-shadow: 0px 0px 4px 2px #eb212e83;
+  transform-origin: bottom right;
+  transition: transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+.eachLink:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }

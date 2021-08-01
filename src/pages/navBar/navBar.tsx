@@ -16,9 +16,9 @@ const NavBar: React.FunctionComponent<IPage> = props => {
     return (
         <div className={style.navbar}>
             <div className={style.links}>
-                <Link to={aboutPath}>About</Link>
-                <Link to={mainPath}>Main</Link>
-                <Link to={landingPath}>Landing</Link>
+                <Link className={style.eachLink} to={aboutPath}>About</Link>
+                <Link className={style.eachLink}to={mainPath}>Main</Link>
+                <Link className={style.eachLink}to={landingPath}>Landing</Link>
             </div>
         </div>
     )
