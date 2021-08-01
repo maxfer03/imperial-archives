@@ -3,22 +3,35 @@
   src: url("../../Perfect\ DOS\ VGA\ 437\ Win.ttf"); /*URL to font*/
 }
 
+:root {
+  --mointor-gray: hsl(0, 0%, 15%);
+}
+
 button {
   font-family: inherit;
 }
 
-.mainContainer {
+.mainContainer{
   display: flex;
-  flex-direction: inherit;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: hsl(0, 0%, 15%);
-  border: 2px solid hsl(0, 0%, 15%);
+}
+
+.mainScreen {
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: var(--mointor-gray);
+  border: 2px solid var(--mointor-gray);
   border-radius: 0.5vh;
   
   padding: 2vh;
   padding-bottom: 0px;
-  box-shadow: inset 0px 0px 10px hsla(0, 0%, 0%, 0.452);
+  box-shadow: inset 0px 0px 10px hsla(0, 0%, 0%, 0.452),
+   0px 0px 10px hsla(0, 0%, 0%, 0.452);
 }
 
 .crt::before {
@@ -32,7 +45,7 @@ button {
   pointer-events: none;
 
   
-  border-left: 2px solid hsl(0, 0%, 15%);
+  border-left: 2px solid var(--mointor-gray);
   width: 77.6vh;
   height: 44vh;
   opacity: 0.5;
@@ -51,7 +64,7 @@ button {
   background: hsl(0, 0%, 10%);
   width: 74vh;
   height: 40vh;
-  border: 2px solid hsl(0, 0%, 15%);
+  border: 2px solid var(--mointor-gray);
   border-radius: 0.5vh;
   padding: 10px;
   box-shadow: inset 0px 0px 10px 0px rgb(0, 0, 0);
@@ -94,6 +107,7 @@ button {
 }
 
 .data {
+  
   border: 1px solid white;
   border-top: 0px;
   height: 31vh;
@@ -128,7 +142,54 @@ button {
   inset 0px 0px 3px 0px rgba(0, 0, 0, 0.534);
 }
 
+.detailScreen{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
+  background: var(--mointor-gray);
+  border: 2px solid var(--mointor-gray);
+  border-radius: 0.5vh;
+  border-top: none;
+  box-shadow: inset 0px 0px 10px hsla(0, 0%, 0%, 0.452),
+  0px 0px 10px hsla(0, 0%, 0%, 0.452);
+
+padding: 3vh;
+}
+
+.detailCrt::before {
+  content: " ";
+  position: absolute;
+  z-index: 2;
+  
+  
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%);
+  background-size: 100% 5px;
+  pointer-events: none;
+
+  
+  border-left: 2px solid var(--mointor-gray);
+  
+  width: 66vh;
+  height: 26vh;
+  opacity: 0.5;
+
+
+}
+
+.detail{
+  font-family: "pixelFont";
+  color: white;
+  background: hsl(0, 0%, 10%);
+  padding: 3vh;
+  border: 2px solid var(--mointor-gray);
+  border-radius: 0.5vh;
+  box-shadow: inset 0px 0px 10px 0px rgb(0, 0, 0);
+
+  animation: textShadow 5s infinite;
+  width: 60vh;
+  height: 20vh;
+}
 
 @keyframes flicker {
   0% {

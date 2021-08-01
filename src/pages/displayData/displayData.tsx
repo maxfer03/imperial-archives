@@ -3,6 +3,7 @@ import { Link, RouteComponentProps, withRouter } from 'react-router-dom'
 import IPage from '../../interfaces/page'
 import logging from '../../config/logging'
 import CategoryList from '../../containers/categoryList'
+import Detail from '../../containers/detail'
 import { indexStore } from '../../index'
 import { getAllCategory } from '../../redux/actions/actionCreators'
 import { landingPath } from '../../interfaces/pagePaths'
@@ -33,33 +34,42 @@ const DisplayData: React.FunctionComponent<IPage & RouteComponentProps<any>> = p
 
     return (
         <div className={style.mainContainer}>
-            <div className={style.crt}>
+            <div className={style.mainScreen}>
+                <div className={style.crt}>
 
-                <div className={style.main}>
+                    <div className={style.main}>
 
-                    <div>
-                        <div className={style.filters}>
-                            <button className={style.eachFilter} onClick={(e: any) => handleClick(e)}>People</button>
-                            <button className={style.eachFilter} onClick={(e: any) => handleClick(e)}>Starships</button>
-                            <button className={style.eachFilter} onClick={(e: any) => handleClick(e)}>Species</button>
-                            <button className={style.eachFilter} onClick={(e: any) => handleClick(e)}>Planets</button>
-                            <button className={style.eachFilter} onClick={(e: any) => handleClick(e)}>Vehicles</button>
+                        <div>
+                            <div className={style.filters}>
+                                <button className={style.eachFilter} onClick={(e: any) => handleClick(e)}>People</button>
+                                <button className={style.eachFilter} onClick={(e: any) => handleClick(e)}>Starships</button>
+                                <button className={style.eachFilter} onClick={(e: any) => handleClick(e)}>Species</button>
+                                <button className={style.eachFilter} onClick={(e: any) => handleClick(e)}>Planets</button>
+                                <button className={style.eachFilter} onClick={(e: any) => handleClick(e)}>Vehicles</button>
+                            </div>
+
+                            <div className={style.data}>
+                                <CategoryList loading={loading} />
+                            </div>
+
                         </div>
-
-                        <div className={style.data}>
-                            <CategoryList loading={loading} />
-                        </div>
+                    </div>
+                </div>
+                <div className={style.buttons}>
+                    <div className={style.buttonContainer}>
+                        <button className={style.eachButton} />
+                        <button className={style.eachButton} />
+                        <button className={style.eachButton} />
+                        <button className={style.eachButton} />
 
                     </div>
                 </div>
             </div>
-            <div className={style.buttons}>
-                <div className={style.buttonContainer}>
-                    <button className={style.eachButton} />
-                    <button className={style.eachButton} />
-                    <button className={style.eachButton} />
-                    <button className={style.eachButton} />
-                    
+            <div className={style.detailScreen}>
+                <div className = {style.detailCrt}>
+                    <div className={style.detail}>
+                    <Detail loading={loading} />
+                    </div>
                 </div>
             </div>
         </div>
