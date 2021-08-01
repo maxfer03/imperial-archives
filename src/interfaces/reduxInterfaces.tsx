@@ -28,6 +28,7 @@ export interface IDetail {
 // Define the Character State
 export interface IDataState {
     readonly data: IData[];
+    readonly detail: IDetail;
 }
 
 // Interface for Get All Action Type

@@ -5,7 +5,7 @@ import logging from '../../config/logging'
 import CategoryList from '../../containers/categoryList'
 import Detail from '../../containers/detail'
 import { indexStore } from '../../index'
-import { getAllCategory } from '../../redux/actions/actionCreators'
+import { getAllCategory, getDetail } from '../../redux/actions/actionCreators'
 import { landingPath } from '../../interfaces/pagePaths'
 import style from './displayData.module.css'
 import imperial_logo from '../../imgs/empire-symbol.png'
@@ -29,6 +29,8 @@ const DisplayData: React.FunctionComponent<IPage & RouteComponentProps<any>> = p
         }
         fetchData()
     }
+
+    
 
 
 

@@ -2,12 +2,15 @@ import { Reducer } from "redux";
 import { DataActions, DataActionTypes } from "../actions/actionTypes";
 import { IDataState } from "../../interfaces/reduxInterfaces";
 
-const initialCharacterState: IDataState = {
+const initialState: IDataState = {
   data: [],
+  detail: {
+    name: ''
+  }
 };
 
 export const dataReducer: Reducer<IDataState, DataActions> = (
-  state = initialCharacterState,
+  state = initialState,
   action
 ) => {
   switch (action.type) {
@@ -15,6 +18,12 @@ export const dataReducer: Reducer<IDataState, DataActions> = (
       return {
         ...state,
         data: action.data,
+      };
+    }
+    case DataActionTypes.GET_DETAIL: {
+      return {
+        ...state,
+        detail: action.data,
       };
     }
     default:
