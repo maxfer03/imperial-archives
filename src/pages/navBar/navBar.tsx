@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import IPage from '../../interfaces/page'
 import logging from '../../config/logging'
 import { aboutPath, landingPath, mainPath } from '../../interfaces/pagePaths'
@@ -16,9 +16,9 @@ const NavBar: React.FunctionComponent<IPage> = props => {
     return (
         <div className={style.navbar}>
             <div className={style.links}>
-                <Link className={style.eachLink} to={aboutPath}>About</Link>
-                <Link className={style.eachLink}to={mainPath}>Main</Link>
-                <Link className={style.eachLink}to={landingPath}>Landing</Link>
+                <NavLink className={style.eachLink} activeClassName={style.activeLink} exact to={aboutPath}>About</NavLink>
+                <NavLink className={style.eachLink} activeClassName={style.activeLink} exact to={mainPath}>Main</NavLink>
+                <NavLink className={style.eachLink} activeClassName={style.activeLink} exact to={landingPath}>Landing</NavLink>
             </div>
         </div>
     )

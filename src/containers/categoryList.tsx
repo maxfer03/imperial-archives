@@ -24,7 +24,7 @@ else return (
     <div>
       {data.map( e => 
         {return (
-          <div> {'>'} {e.name}</div>
+          <div className ={style.name}> {'>'} {e.name.toUpperCase()}</div>
         )}
       )}
     </div>
