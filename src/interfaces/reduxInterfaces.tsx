@@ -21,6 +21,10 @@ export interface IData {
     url: string; */
 }
 
+export interface IDetail {
+    name: string;
+}
+
 // Define the Character State
 export interface IDataState {
     readonly data: IData[];
@@ -30,6 +34,11 @@ export interface IDataState {
 export interface IDataGetAllAction {
     type: DataActionTypes.GET_ALL;
     data: IData[];
+}
+
+export interface IDataGetDetailAction {
+    type: DataActionTypes.GET_DETAIL;
+    data: IDetail;
 }
 
 export interface IAppState {
